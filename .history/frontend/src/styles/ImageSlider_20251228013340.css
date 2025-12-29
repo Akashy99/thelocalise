@@ -1,0 +1,34 @@
+/* SLIDER CONTAINER */
+.slider-container {
+    width: 100%;
+    height: 400px;   /* adjust as needed */
+    position: relative;
+    overflow: hidden;
+  }
+      
+  /* SLIDE IMAGE */
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  
+    object-fit: contain;   /* ✅ SHOW FULL IMAGE */
+    background-color: #000; /* optional black background */
+  
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  
+  /* ACTIVE SLIDE */
+  .slide.active {
+    opacity: 1;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .slider-container {
+      height: 220px;
+    }
+  }
+  

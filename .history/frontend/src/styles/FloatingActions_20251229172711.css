@@ -1,0 +1,116 @@
+/* =============================== */
+/* FLOATING ACTION BUTTON          */
+/* =============================== */
+
+.floating-actions {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+  }
+  
+  /* MAIN CIRCLE BUTTON */
+  .floating-main {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    border: none;
+  
+    background: linear-gradient(135deg, #0d47a1, #1565c0);
+    color: #fff;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    font-size: 22px;
+    cursor: pointer;
+  
+    box-shadow: 0 12px 30px rgba(13, 71, 161, 0.35);
+    transition: all 0.3s ease;
+  }
+  
+  .floating-main:hover {
+    transform: scale(1.08);
+  }
+  
+  .floating-main.active {
+    background: #08306b;
+  }
+  
+  /* =============================== */
+  /* POPUP MENU                      */
+  /* =============================== */
+  
+  .floating-menu {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  
+    animation: slideUp 0.3s ease;
+  }
+  
+  /* ACTION BUTTONS */
+  .floating-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  
+    padding: 12px 18px;
+    border-radius: 30px;
+  
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+  
+    color: #fff;
+    white-space: nowrap;
+  
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: all 0.25s ease;
+  }
+  
+  /* CALL */
+  .floating-btn.call {
+    background: linear-gradient(135deg, #0d47a1, #1565c0);
+  }
+  
+  /* WHATSAPP */
+  .floating-btn.whatsapp {
+    background: linear-gradient(135deg, #1ebc57, #25d366);
+  }
+  
+  /* HOVER */
+  .floating-btn:hover {
+    transform: translateY(-3px);
+  }
+  
+  /* =============================== */
+  /* ANIMATION                       */
+  /* =============================== */
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* =============================== */
+  /* MOBILE                          */
+  /* =============================== */
+  
+  @media (max-width: 768px) {
+    .floating-btn span {
+      font-size: 13px;
+    }
+  }
+  

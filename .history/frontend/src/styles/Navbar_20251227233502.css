@@ -1,0 +1,84 @@
+/* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(
+      90deg,
+      #0d47a1 0%,
+      #1976d2 40%,
+      #ff0000 100%
+    ); /* BLUE → RED */
+    padding: 14px 35px;
+  }
+  
+  /* ===== LOGO ===== */
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .logo span {
+    color: #ff0000; /* RED highlight */
+  }
+  
+  /* ===== MENU ===== */
+  .menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+  
+  .menu li {
+    position: relative;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+  }
+  
+  /* ===== DROPDOWN ===== */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 32px;
+    left: 0;
+    background-color: white;
+    min-width: 270px;
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+    list-style: none;
+    padding: 12px 0;
+    border-top: 4px solid #ff0000;
+    z-index: 1000;
+  }
+  
+  /* Dropdown items */
+  .dropdown-menu li {
+    padding: 10px 18px;
+    color: #0d47a1; /* BLUE */
+    font-size: 13.5px;
+  }
+  
+  /* Hover effect */
+  .dropdown-menu li:hover {
+    background-color: #ff0000; /* RED */
+    color: white;
+  }
+  
+  /* Show dropdown */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* ===== SEARCH ===== */
+  .search {
+    font-size: 18px;
+    color: white;
+  }
+  
+  .search:hover {
+    color: #ff0000;
+  }
+  

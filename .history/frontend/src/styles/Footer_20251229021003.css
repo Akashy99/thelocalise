@@ -1,0 +1,191 @@
+/* =============================== */
+/* FOOTER BASE                     */
+/* =============================== */
+
+.footer {
+  background: #080202;               /* clean white */
+  color: #0d0b0b;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.08); /* royal soft shadow */
+  margin-top: 80px;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* =============================== */
+/* FOOTER CONTAINER                */
+/* =============================== */
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 40px 40px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+/* =============================== */
+/* LOGO + ABOUT                    */
+/* =============================== */
+
+.footer-logo {
+  height: 60px;
+  margin-bottom: 14px;
+}
+
+.footer-logo-section p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #444;
+}
+
+.footer-logo-section strong {
+  color: #000;
+  font-weight: 600;
+}
+
+/* =============================== */
+/* FOOTER HEADINGS                 */
+/* =============================== */
+
+.footer-section h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #f7efef;
+  position: relative;
+}
+
+.footer-section h4::after {
+  content: "";
+  width: 35px;
+  height: 2px;
+  background: #191818; /* brand accent */
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+}
+
+/* =============================== */
+/* LINKS                           */
+/* =============================== */
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: #ebe2e2;
+  font-size: 14px;
+  transition: color 0.25s ease;
+}
+
+.footer-section a:hover {
+  color: #b92929;
+}
+
+/* =============================== */
+/* CONTACT INFO                    */
+/* =============================== */
+
+.footer-section address {
+  font-style: normal;
+}
+
+.footer-section p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #e9e7e7;
+}
+
+.footer-section svg {
+  color: #060505;
+  font-size: 15px;
+}
+
+/* =============================== */
+/* SOCIAL ICONS                    */
+/* =============================== */
+
+.social-icons {
+  display: flex;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.social-icons a {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f5f5f5;
+  color: #222;
+  border-radius: 50%;
+
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #000;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* =============================== */
+/* FOOTER BOTTOM                   */
+/* =============================== */
+
+.footer-bottom {
+  border-top: 1px solid #eee;
+  text-align: center;
+  padding: 18px 20px;
+  font-size: 13px;
+  color: #666;
+}
+
+.footer-bottom strong {
+  color: #000;
+}
+
+/* =============================== */
+/* MOBILE RESPONSIVE               */
+/* =============================== */
+
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .footer-section h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-section p {
+    justify-content: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}

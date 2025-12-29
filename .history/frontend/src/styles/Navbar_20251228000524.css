@@ -1,0 +1,129 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #0d47a1, #ff0000);
+    padding: 14px 35px;
+  }
+  
+  /* LOGO */
+  /* LOGO IMAGE FIX */
+.logo img {
+    height: 65px;      /* adjust this (40–55px ideal) */
+    width: auto;       /* keeps image ratio */
+    object-fit: contain;
+  }
+  
+  
+  .logo span {
+    color: #ffeb3b;
+  }
+  
+  /* MENU */
+  .menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+  
+  .menu li {
+    position: relative;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+  }
+  
+  /* DROPDOWN */
+  .dropdown-menu {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background: white;
+    min-width: 260px;
+    list-style: none;
+    padding: 10px 0;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    border-top: 4px solid red;
+    z-index: 1000;
+  }
+  
+  /* DROPDOWN ITEM BASE */
+.dropdown-menu li {
+    padding: 10px 16px;
+    color: #0d47a1;
+    font-size: 13.5px;
+    transition: 
+      background-color 0.25s ease,
+      color 0.25s ease,
+      padding-left 0.25s ease;
+  }
+  
+  /* LEFT ACCENT BAR (HIDDEN INITIALLY) */
+  .dropdown-menu li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: #ff0000;
+    transition: width 0.25s ease;
+  }
+  
+  /* HOVER EFFECT */
+  .dropdown-menu li:hover {
+    background-color: #fdf1f1;   /* soft red background */
+    color: #ff0000;
+    padding-left: 24px;          /* slide effect */
+  }
+  
+  /* SHOW LEFT BAR ON HOVER */
+  .dropdown-menu li:hover::before {
+    width: 4px;
+  }
+    
+ /* SEARCH ICON */
+/* SEARCH ICON - PROFESSIONAL */
+.search-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    font-size: 20px;        /* icon size */
+    cursor: pointer;
+    color: white;
+  
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  
+  /* Hover effect */
+  .search-icon:hover {
+    color: #2a2add;         /* soft highlight */
+    transform: scale(1.1);
+  }
+    
+  /* SEARCH INPUT ANIMATION */
+  .search-input {
+    padding: 8px 14px;
+    width: 190px;
+    font-size: 13px;
+  
+    border-radius: 50px;
+    border: 1px solid #e0e0e0;
+  
+    outline: none;
+    background-color: #ffffff;
+    color: #333;
+  
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+  }
+  
+  /* Focus effect */
+  .search-input:focus {
+    border-color: #ff0000;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+  }
+  
+  

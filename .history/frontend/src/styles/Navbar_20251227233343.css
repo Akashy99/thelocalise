@@ -1,0 +1,73 @@
+/* Navbar main */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0d47a1; /* BLUE */
+    padding: 12px 30px;
+  }
+  
+  /* Logo */
+  .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff0000; /* RED */
+  }
+  
+  /* Menu */
+  .menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+  
+  .menu li {
+    position: relative;
+    cursor: pointer;
+    font-size: 14px;
+    color: white; /* TEXT WHITE */
+  }
+  
+  /* Dropdown menu box */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background-color: white;
+    min-width: 260px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    list-style: none;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+  
+  /* Dropdown items */
+  .dropdown-menu li {
+    padding: 8px 15px;
+    color: #0d47a1; /* BLUE TEXT */
+  }
+  
+  /* Hover on dropdown item */
+  .dropdown-menu li:hover {
+    background-color: #ff0000; /* RED */
+    color: white;
+  }
+  
+  /* Show dropdown */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Search icon */
+  .search {
+    font-size: 18px;
+    color: white;
+  }
+  
+  /* Search hover */
+  .search:hover {
+    color: #ff0000; /* RED */
+  }
+  

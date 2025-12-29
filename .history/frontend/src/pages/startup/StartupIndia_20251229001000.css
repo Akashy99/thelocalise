@@ -1,0 +1,148 @@
+/* SERVICE PAGE WRAPPER */
+.service-page {
+  padding: 90px 40px 70px;
+  background: linear-gradient(180deg, #f7f9ff 0%, #eef2ff 100%);
+}
+
+/* MAIN CONTENT */
+.service-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* LEFT CONTENT */
+.service-text {
+  flex: 1;
+}
+
+.service-text h1 {
+  font-size: 38px;
+  font-weight: 800;
+  color: #0d47a1;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+}
+
+.service-desc {
+  font-size: 16.5px;
+  line-height: 1.8;
+  color: #4a4a4a;
+  margin-bottom: 26px;
+}
+
+/* BULLET POINTS */
+.service-points {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 36px;
+}
+
+.service-points li {
+  font-size: 15.5px;
+  color: #333;
+  margin-bottom: 14px;
+  padding-left: 34px;
+  position: relative;
+}
+
+/* CHECK ICON STYLE */
+.service-points li::before {
+  content: "✓";
+  width: 22px;
+  height: 22px;
+  background: #e8f0ff;
+  color: #0d47a1;
+  font-weight: bold;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
+/* BUTTONS */
+.service-buttons {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+/* CALL BUTTON */
+.call-btn {
+  background: linear-gradient(135deg, #0d47a1, #1565c0);
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(13, 71, 161, 0.25);
+}
+
+.call-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(13, 71, 161, 0.35);
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-btn {
+  background: linear-gradient(135deg, #1ebc57, #25d366);
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(37, 211, 102, 0.4);
+}
+
+/* RIGHT IMAGE */
+.service-image {
+  flex: 1;
+  text-align: right;
+}
+
+.service-image img {
+  max-width: 440px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .service-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .service-image {
+    text-align: center;
+  }
+
+  .service-buttons {
+    justify-content: center;
+  }
+
+  .service-text h1 {
+    font-size: 30px;
+  }
+
+  .service-desc {
+    font-size: 15.5px;
+  }
+}

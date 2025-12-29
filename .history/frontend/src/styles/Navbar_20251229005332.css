@@ -1,0 +1,244 @@
+/* =============================== */
+/* NAVBAR                          */
+/* =============================== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: linear-gradient(90deg, #f2f3f4, #827f7f);
+  padding: 14px 35px;
+}
+
+/* =============================== */
+/* LOGO                            */
+/* =============================== */
+
+.logo img {
+  height: 65px;
+  width: auto;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* =============================== */
+/* MENU (DESKTOP)                  */
+/* =============================== */
+
+.menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* TOP LEVEL ITEMS */
+.menu > li {
+  position: relative;
+  cursor: pointer;
+  color: #090808;
+  font-size: 14.5px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.menu > li:hover {
+  color: #111;
+}
+
+/* =============================== */
+/* LINKS FIX                       */
+/* =============================== */
+
+.menu a,
+.dropdown-menu a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.menu a:visited,
+.menu a:active,
+.menu a:focus,
+.dropdown-menu a:visited,
+.dropdown-menu a:active,
+.dropdown-menu a:focus {
+  color: inherit;
+  outline: none;
+}
+
+/* =============================== */
+/* DROPDOWN MENU (DESKTOP)         */
+/* =============================== */
+
+.dropdown-menu {
+  position: absolute;
+  top: 35px;
+  left: 0;
+
+  min-width: 260px;
+  list-style: none;
+  padding: 10px 0;
+
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  border-top: 4px solid red;
+  z-index: 1000;
+}
+
+/* DROPDOWN ITEMS */
+.dropdown-menu li {
+  position: relative;
+  padding: 10px 16px;
+  color: #0d47a1;
+  font-size: 13.5px;
+  font-weight: 500;
+  transition: background 0.25s ease, color 0.25s ease, padding-left 0.25s ease;
+}
+
+/* LEFT ACCENT BAR */
+.dropdown-menu li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background-color: #ff0000;
+  transition: width 0.25s ease;
+}
+
+.dropdown-menu li:hover {
+  background: rgba(255, 0, 0, 0.08);
+  color: #ff0000;
+  padding-left: 24px;
+}
+
+.dropdown-menu li:hover::before {
+  width: 4px;
+}
+
+/* =============================== */
+/* SEARCH                          */
+/* =============================== */
+
+.search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  color: #111;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.search-icon:hover {
+  color: #2a2add;
+  transform: scale(1.1);
+}
+
+.search-input {
+  padding: 8px 14px;
+  width: 190px;
+  max-width: 90vw;
+  font-size: 13px;
+
+  border-radius: 50px;
+  border: 1px solid #e0e0e0;
+
+  outline: none;
+  background-color: #ffffff;
+  color: #333;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #ff0000;
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+}
+
+/* =============================== */
+/* HAMBURGER MENU                  */
+/* =============================== */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #111;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* =============================== */
+/* MOBILE NAVBAR FIX (IMPORTANT)   */
+/* =============================== */
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  /* MOBILE MENU OPENS BELOW NAVBAR */
+  .menu {
+    position: absolute;        /* ✅ NOT fixed */
+    top: 100%;                 /* ✅ below navbar */
+    left: 0;
+    width: 100%;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(12px);
+
+    padding: 10px 0;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+
+    display: none;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .menu > li {
+    width: 100%;
+    padding: 14px 22px;
+  }
+
+  /* MOBILE DROPDOWN */
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    background: transparent;
+    box-shadow: none;
+    border-top: none;
+    padding-left: 10px;
+  }
+
+  .search-input {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

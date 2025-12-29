@@ -1,0 +1,226 @@
+/* =============================== */
+/* NAVBAR (STICKY + PREMIUM)       */
+/* =============================== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 14px 36px;
+  background: linear-gradient(90deg, #f9fafc, #e6e8ec);
+
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.35s ease, background 0.3s ease;
+}
+
+/* HIDE ON SCROLL DOWN */
+.navbar.hide {
+  transform: translateY(-100%);
+}
+
+/* SHOW ON SCROLL UP */
+.navbar.show {
+  transform: translateY(0);
+}
+
+/* =============================== */
+/* LOGO                            */
+/* =============================== */
+
+.logo img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* =============================== */
+/* MENU                            */
+/* =============================== */
+
+.menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+/* TOP LEVEL ITEMS */
+.menu > li {
+  position: relative;
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #111;
+
+  transition: color 0.25s ease;
+}
+
+.menu > li:hover {
+  color: #0d47a1;
+}
+
+/* =============================== */
+/* LINKS FIX                       */
+/* =============================== */
+
+.menu a,
+.dropdown-menu a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.menu a:visited,
+.menu a:active,
+.menu a:focus,
+.dropdown-menu a:visited,
+.dropdown-menu a:active,
+.dropdown-menu a:focus {
+  color: inherit;
+  outline: none;
+}
+
+/* =============================== */
+/* DROPDOWN MENU                   */
+/* =============================== */
+
+.dropdown-menu {
+  position: absolute;
+  top: 36px;
+  left: 0;
+
+  background: #ffffff;
+  min-width: 260px;
+  padding: 10px 0;
+  list-style: none;
+
+  border-radius: 8px;
+  border-top: 4px solid #ff0000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+  z-index: 1000;
+}
+
+/* DROPDOWN ITEMS */
+.dropdown-menu li {
+  position: relative;
+  padding: 11px 18px;
+
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #0d47a1;
+
+  transition: all 0.25s ease;
+}
+
+/* LEFT ACCENT */
+.dropdown-menu li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background: #ff0000;
+  transition: width 0.25s ease;
+}
+
+.dropdown-menu li:hover {
+  background: #fdf1f1;
+  color: #ff0000;
+  padding-left: 26px;
+}
+
+.dropdown-menu li:hover::before {
+  width: 4px;
+}
+
+/* =============================== */
+/* SEARCH                          */
+/* =============================== */
+
+.search-icon {
+  font-size: 20px;
+  cursor: pointer;
+  color: #111;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.search-icon:hover {
+  color: #0d47a1;
+  transform: scale(1.1);
+}
+
+.search-input {
+  padding: 8px 16px;
+  width: 190px;
+  font-size: 13px;
+
+  border-radius: 50px;
+  border: 1px solid #d0d0d0;
+
+  outline: none;
+  background: #ffffff;
+  color: #333;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #0d47a1;
+  box-shadow: 0 0 10px rgba(13, 71, 161, 0.35);
+}
+
+/* =============================== */
+/* MOBILE RESPONSIVE               */
+/* =============================== */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  .menu {
+    position: fixed;
+    top: 78px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+
+    padding: 15px 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .menu > li {
+    width: 100%;
+    padding: 14px 24px;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border-top: none;
+    border-radius: 0;
+  }
+
+  .search-input {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

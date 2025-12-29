@@ -1,0 +1,80 @@
+/* =============================== */
+/* CONTACT US PAGE                 */
+/* =============================== */
+
+.contact-page {
+    margin-top: 120px;
+    padding: 60px 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Heading */
+  .contact-page h1 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #0d47a1;
+    margin-bottom: 20px;
+  }
+  
+  /* Intro text */
+  .contact-page p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 18px;
+  }
+  
+  /* Contact details block */
+  .contact-details {
+    margin-top: 35px;
+    background: #f8faff;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Individual contact rows */
+  .contact-details p {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15.5px;
+    margin-bottom: 14px;
+    color: #222;
+  }
+  
+  /* Icons */
+  .contact-details svg {
+    color: #0d47a1;
+    font-size: 17px;
+  }
+  
+  /* Links */
+  .contact-details a {
+    text-decoration: none;
+    color: #0d47a1;
+    font-weight: 600;
+    transition: color 0.25s ease;
+  }
+  
+  .contact-details a:hover {
+    color: #08306b;
+  }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .contact-page {
+      padding: 40px 20px;
+    }
+  
+    .contact-page h1 {
+      font-size: 30px;
+    }
+  
+    .contact-details {
+      padding: 24px;
+    }
+  }
+  

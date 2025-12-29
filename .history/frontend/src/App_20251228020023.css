@@ -1,0 +1,92 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* ============================= */
+/* HERO HEADING BELOW NAVBAR     */
+/* ============================= */
+
+.hero {
+  margin-top: 90px; /* just below fixed navbar */
+  padding: 40px 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  height: 220px;
+
+  /* PROFESSIONAL BACKGROUND */
+  background: linear-gradient(
+    135deg,
+    #0d47a1 0%,
+    #1e5bd8 50%,
+    #c62828 100%
+  );
+}
+
+
+.hero-title {
+  font-size: 50px;          /* strong heading */
+  font-weight: 800;         /* bold but clean */
+  letter-spacing: 0.6px;    /* professional spacing */
+
+  color: #ffffff;
+
+  text-transform: capitalize;
+
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeUp 1s ease forwards;
+
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.hero-title span {
+  color: #ffeb3b; /* brand highlight */
+}
+
+
+
+/* Fade-up animation */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
